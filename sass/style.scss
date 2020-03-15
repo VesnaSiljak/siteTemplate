@@ -1,0 +1,1619 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+@import 'header.scss';
+@import 'footer.scss';
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: $bg-color;
+}
+
+button {
+	cursor: pointer;
+}
+
+.desktop-content {
+	@include for-tablet {
+		display: none !important;
+	}
+}
+
+.mobile-content {
+	display: none;
+	@include for-tablet {
+		display: block;
+	}
+}
+
+main {
+	overflow: hidden;
+}
+
+.top-nav {
+	padding-left: 50px;
+	@include for-phone {
+		padding-left: 20px;
+	}
+	overflow: auto;
+	ul {
+		min-width: 520px;
+		padding: 0px;
+		display: flex;
+		li {
+			margin-right: 20px;
+			list-style: none;
+			a {
+				font-family: Gotham;
+				font-size: 14px;
+				line-height: 17px;
+				color: $black;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.section1 {
+	padding: 0 100px;
+	margin-top: 30px;
+	@include for-tablet {
+		padding: 0 50px;
+	}
+	@include for-phone {
+		padding: 0 20px;
+		margin-top: 0px;
+	}
+	.section1-content {
+		position: relative;
+		display: flex;
+		.section1-left {
+			display: flex;
+			align-items: center;
+			width: 50%;
+			@include for-tablet {
+				position: absolute;
+				bottom: 50px;
+				left: 55px;
+			}
+			@include for-phone {
+				left: 15px;
+			}
+			p {
+				font-family: Gotham;
+				font-size: 16px;
+				line-height: 19px;
+				color: $light-gray;
+				margin-bottom: 10px;
+				@include for-tablet {
+					color: $white;
+				}
+			}
+			h1 {
+				font-family: Gotham Ultra;
+				font-weight: 900;
+				font-size: 72px;
+				line-height: 76px;
+				margin-bottom: 50px;
+				margin-top: 0px;
+				width: 475px;
+				letter-spacing: 2px;
+				@include for-tablet {
+					font-family: Gotham Medium;
+					color: $white;
+				}
+				@include for-phone {
+					font-size: 34px;
+					line-height: 40px;
+					width: 250px;
+				}
+			}
+			nav {
+				ul {
+					padding: 0px;
+					display: flex;
+					li {
+						margin-right: 20px;
+						list-style: none;
+						a {
+							font-family: Gotham;
+							font-size: 14px;
+							line-height: 17px;
+							color: $black;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		.section1-right {
+			width: 50%;
+			display: flex;
+			justify-content: flex-end;
+			@include for-tablet {
+				width: 100%;
+			}
+			.video-holder {
+				width: 500px;
+				height: 620px;
+				overflow: hidden;
+				border-radius: 30px;
+				@include for-tablet {
+					width: 100%;
+				}
+				@include for-phone {
+					height: 400px;
+				}
+			}
+			.video-button {
+				background: transparent;
+				width: 158px;
+				height: 158px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				border: 60px solid $gray-transparent;
+				position: absolute;
+				right: 360px;
+				top: 378px;
+				@include for-tablet {
+					right: -137px;
+					top: 405px;
+				}
+				@include for-phone {
+					right: 25px;
+					top: 366px;
+					width: 58px;
+					height: 58px;
+					border: none;
+				}
+				&.stop {
+					display: none;
+					left: -140px;
+					@include for-tablet {
+						left: -137px;
+					}
+					@include for-phone {
+						left: inherit;
+						right: 25px;
+					}
+				}
+				button {
+					position: absolute;
+					background-color: $black;
+					background-repeat: no-repeat;
+					border: none;
+					width: 76px;
+					height: 76px;
+					background-position: 55% center;
+					border-radius: 50%;
+					cursor: pointer;
+					@include for-phone {
+						width: 58px;
+						height: 58px;
+					}
+					&:focus {
+						outline: none;
+					}
+					&#play {
+						background-image: url(../../assets/images/play.svg);
+					}
+					&#stop {
+						background-position: center;
+						background-image: url(../../assets/images/stop.svg);
+					}
+				}
+			}
+		}
+	}
+}
+
+.section2 {
+	padding: 0 100px;
+	margin-top: 130px;
+	@include for-tablet {
+		padding: 0;
+	}
+	.intro {
+		text-align: center;
+		font-family: Gotham;
+		margin-bottom: 180px;
+		@include for-tablet {
+			text-align: left;
+			padding-left: 50px;
+			margin-bottom: 70px;
+		}
+		@include for-phone {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			color: $light-gray;
+			@include for-phone {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+		h2 {
+			margin-top: 0px;
+			font-size: 40px;
+			line-height: 48px;
+			margin-bottom: 25px;
+			@include for-phone {
+				font-size: 24px;
+				line-height: 29px;
+			}
+		}
+		.intro-text {
+			font-size: 18px;
+			line-height: 30px;
+			color: $black;
+			max-width: 750px;
+			margin: auto;
+			@include for-tablet {
+				margin-left: 0px;
+			}
+			@include for-phone {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+	.mobile-scroll-content {
+		padding-left: 50px;
+		overflow: auto;
+		@include for-phone {
+			padding-left: 20px;
+		}
+		.horizontal-holder {
+			width: 930px;
+			@include for-phone {
+				width: 800px;
+			}
+			.s2-item {
+				display: inline-block;
+				width: 283px;
+				margin-right: 15px;
+				position: relative;
+				@include for-phone {
+					width: 245px;
+				}
+				img {
+					width: 100%;
+				}
+				.s2-item-text {
+					position: absolute;
+					bottom: 20px;
+					left: 20px;
+					color: $white;
+					width: 200px;
+					h2 {
+						font-family: Gotham Medium;
+						font-size: 30px;
+						line-height: 40px;
+						margin-bottom: 0px;
+					}
+					p {
+						font-family: Gotham;
+						font-size: 14px;
+						line-height: 22px;
+					}
+				}
+			}
+		}
+	}
+	.scroll-content {
+		display: flex;
+		justify-content: center;
+		.items {
+			display: flex;
+			justify-content: center;
+			width: 66%;
+			.img-holder {
+				position: relative;
+				.indicators {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					top: 0px;
+					div {
+						height: 33%;
+					}
+				}
+			}
+			.descriptions {
+				margin-left: 80px;
+				display: flex;
+				flex-wrap: wrap;
+				align-self: center;
+				.item {
+					width: 100%;
+					&.active {
+						position: relative;
+						&::before {
+							content: '';
+							width: 104px;
+							height: 7px;
+							background: url(../../assets/images/arrow.svg);
+							background-repeat: no-repeat;
+							position: absolute;
+							left: -114px;
+							top: 34px;
+						}
+						h2 {
+							font-size: 44px;
+							line-height: 53px;
+							letter-spacing: 0.825px;
+							color: $light-blue;
+							font-family: Gotham Medium;
+							margin-bottom: 0px;
+							margin-top: 10px;
+						}
+						p {
+							display: block;
+						}
+					}
+					h2 {
+						font-size: 24px;
+						line-height: 53px;
+						letter-spacing: 0.825px;
+						color: $black;
+						font-family: Gotham Medium;
+						margin-bottom: 0px;
+						margin-top: 10px;
+					}
+					p {
+						font-size: 18px;
+						line-height: 30px;
+						color: $black;
+						font-family: Gotham;
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.section4 {
+	padding: 0 100px;
+	margin-top: 300px;
+	@include for-tablet {
+        padding: 0 50px;
+        margin-top: 80px;
+	}
+	@include for-phone {
+		padding: 0 20px;
+	}
+	>p {
+		font-family: Gotham;
+		font-size: 16px;
+		line-height: 19px;
+		color: $light-gray;
+		margin-bottom: 0px;
+	}
+	.section4-content {
+		display: flex;
+		@include for-tablet {
+			display: block;
+		}
+		.section4-left {
+			width: 50%;
+			h2 {
+				font-family: Gotham medium;
+				font-size: 60px;
+				line-height: 76px;
+				margin-top: 20px;
+				@include for-tablet {
+					font-size: 30px;
+					line-height: 40px;
+					width: 270px;
+				}
+			}
+		}
+		.section4-right {
+			width: 50%;
+			display: flex;
+			justify-content: flex-end;
+			@include for-tablet {
+				width: 100%;
+				justify-content: left;
+			}
+			@include for-phone {
+				display: block;
+			}
+			.chart-holder {
+				width: 154px;
+				margin-left: 20px;
+				@include for-tablet {
+					margin-left: 0px;
+					margin-right: 20px;
+				}
+				@include for-phone {
+					width: 100%;
+				}
+				p {
+					font-family: Gotham Medium;
+					text-align: center;
+					font-size: 16px;
+					line-height: 24px;
+					margin-top: 0px;
+					@include for-phone {
+						margin-bottom: 7px;
+						text-align: left;
+					}
+					span {
+						display: none;
+						@include for-phone {
+							display: inline;
+							float: right;
+						}
+						strong {
+							font-size: 12px;
+							font-family: Gotham;
+						}
+					}
+				}
+				.chart {
+					width: 154px;
+					height: 154px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: relative;
+					@include for-phone {
+						display: none;
+					}
+					canvas {
+						position: absolute;
+						left: 0;
+					}
+					span {
+						font-family: Gotham Medium;
+						font-size: 40px;
+						color: $light-blue;
+						strong {
+							font-size: 28px;
+							margin-left: 2px;
+						}
+					}
+				}
+				.s4-progressbar {
+					display: none;
+					width: 100%;
+					height: 6px;
+					margin-bottom: 15px;
+					background: $white-gray;
+					border-radius: 3px;
+					@include for-phone {
+						display: block;
+					}
+					.progress {
+						animation-name: load;
+						animation-timing-function: linear;
+						height: 6px;
+						background: $light-blue;
+						border-radius: 3px;
+						@each $time in $times {
+							&.load#{$time} {
+								animation-duration: #{$time}s;
+							}
+						}
+					}
+				}
+			}
+		}
+		&#music-s {
+			display: none;
+		}
+		&#movie-s {
+			display: none;
+		}
+	}
+	.section4-navigation {
+		display: flex;
+		margin-top: 40px;
+		margin-bottom: 100px;
+		.linkbtn-holder {
+			width: 53px;
+			height: 53px;
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: 50%;
+			cursor: pointer;
+			position: relative;
+			margin-right: 10px;
+			@include transitionAll(all, 0.5s);
+			&::before {
+				@include transitionAll(all, 0.5s);
+				content: '';
+				width: 0px;
+				height: 1px;
+				background-color: $black;
+				position: absolute;
+				top: 27px;
+				left: 47px;
+			}
+			&:hover {
+				background-color: $white-gray;
+				@include transitionAll(all, 0.5s);
+			}
+			&.active {
+				background-color: $light-blue;
+				@include transitionAll(all, 0.5s);
+			}
+			&#cloud {
+				background-image: url(../../assets/images/cloud-black.svg);
+				@include transitionAll(all, 0.5s);
+				&.active {
+					background-image: url(../../assets/images/cloud-white.svg);
+					margin-right: 100px;
+					@include transitionAll(all, 0.5s);
+					&::before {
+						@include transitionAll(all, 0.5s);
+						content: '';
+						width: 100px;
+						height: 1px;
+						background-color: $black;
+						position: absolute;
+						top: 27px;
+						left: 47px;
+					}
+				}
+				&.active-last {
+					@include transitionAll(all, 0.5s);
+					margin-left: 100px;
+					&::before {
+						@include transitionAll(all, 0.5s);
+						content: '';
+						width: 100px;
+						height: 1px;
+						background-color: $black;
+						position: absolute;
+						top: 27px;
+						left: -94px;
+					}
+				}
+			}
+			&#music {
+				background-image: url(../../assets/images/music-black.svg);
+				background-position: 46% center;
+				&.active {
+					@include transitionAll(all, 0.5s);
+					background-image: url(../../assets/images/music-white.svg);
+					margin-right: 100px;
+					&::before {
+						@include transitionAll(all, 0.5s);
+						content: '';
+						width: 100px;
+						height: 1px;
+						background-color: $black;
+						position: absolute;
+						top: 27px;
+						left: 47px;
+					}
+				}
+			}
+			&#movie {
+				background-image: url(../../assets/images/movie-black.svg);
+				&.active {
+					@include transitionAll(all, 0.5s);
+					background-image: url(../../assets/images/movie-white.svg);
+				}
+			}
+		}
+	}
+}
+
+.section6 {
+	padding: 0 100px;
+	margin-top: 190px;
+	@include for-tablet {
+		padding: 0 50px;
+        overflow: auto;
+        margin-top: 70px;
+	}
+	@include for-phone {
+		padding: 0 20px;
+	}
+	>p {
+		font-family: Gotham;
+		font-size: 16px;
+		line-height: 19px;
+		color: $light-gray;
+		margin-bottom: 0px;
+	}
+	.section6-content {
+		display: flex;
+		justify-content: space-between;
+		@include for-tablet {
+			display: block;
+			width: 3400px;
+		}
+		@include for-phone {
+			width: 1700px;
+		}
+		.section6-item {
+			width: 45%;
+			display: none;
+			@include for-tablet {
+				display: inline-block;
+				width: 500px;
+				margin-right: 50px;
+			}
+			@include for-phone {
+				width: 230px;
+			}
+			h2 {
+				font-size: 48px;
+				line-height: 54px;
+				font-family: Gotham medium;
+				margin-bottom: 10px;
+				@include for-phone {
+					font-size: 24px;
+					line-height: 36px;
+				}
+			}
+			p {
+				font-size: 18px;
+				line-height: 30px;
+				font-family: Gotham;
+				@include for-phone {
+					font-size: 14px;
+					line-height: 24px;
+				}
+			}
+			&[data-no="1"] {
+				display: block;
+				@include for-tablet {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.section6-navigation {
+		display: flex;
+		margin-top: 40px;
+		margin-bottom: 100px;
+		@include for-tablet {
+			display: none;
+		}
+		.nobtn-holder {
+			width: 53px;
+			height: 53px;
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: 50%;
+			cursor: pointer;
+			position: relative;
+			margin-right: 10px;
+			font-size: 18px;
+			font-family: Gotham medium;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include transitionAll(all, 0.5s);
+			&::before {
+				@include transitionAll(all, 0.5s);
+				content: '';
+				width: 0px;
+				height: 1px;
+				background-color: $black;
+				position: absolute;
+				top: 27px;
+				left: 47px;
+			}
+			&:hover {
+				background-color: $white-gray;
+				@include transitionAll(all, 0.5s);
+			}
+			&.active {
+				background-color: $light-blue;
+				color: $white;
+				@include transitionAll(all, 0.5s);
+			}
+			&#nav-one {
+				@include transitionAll(all, 0.5s);
+				&.active {
+					margin-right: 100px;
+					@include transitionAll(all, 0.5s);
+					&::before {
+						@include transitionAll(all, 0.5s);
+						content: '';
+						width: 100px;
+						height: 1px;
+						background-color: $black;
+						position: absolute;
+						top: 27px;
+						left: 47px;
+					}
+				}
+				&.active-last {
+					@include transitionAll(all, 0.5s);
+					margin-left: 100px;
+					&::before {
+						@include transitionAll(all, 0.5s);
+						content: '';
+						width: 100px;
+						height: 1px;
+						background-color: $black;
+						position: absolute;
+						top: 27px;
+						left: -94px;
+					}
+				}
+			}
+			&#nav-two {
+				background-position: 46% center;
+				&.active {
+					@include transitionAll(all, 0.5s);
+					margin-right: 100px;
+					&::before {
+						@include transitionAll(all, 0.5s);
+						content: '';
+						width: 100px;
+						height: 1px;
+						background-color: $black;
+						position: absolute;
+						top: 27px;
+						left: 47px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.more-info {
+	padding: 0 100px;
+	margin-top: 130px;
+	font-family: Gotham;
+	@include for-tablet {
+		padding: 0 50px;
+	}
+	@include for-phone {
+		padding: 0 20px;
+	}
+	.info-content {
+		background: $white-gray;
+		border-radius: 38px;
+		height: 78px;
+		overflow: hidden;
+		@include transitionAll(all, 0.5s);
+		@include for-phone {
+			height: 48px;
+		}
+		&.open {
+			height: 300px;
+			@include transitionAll(all, 0.5s);
+		}
+		.content-header {
+			height: 78px;
+			display: flex;
+			justify-content: space-between;
+			padding-left: 45px;
+			padding-right: 15px;
+			align-items: center;
+			@include for-phone {
+				height: 48px;
+				padding-left: 25px;
+			}
+			h3 {
+				font-size: 24px;
+				@include for-phone {
+					font-size: 14px;
+				}
+			}
+			.expand {
+				width: 53px;
+				height: 53px;
+				border-radius: 50%;
+				background-color: $light-blue;
+				background-image: url(../../assets/images/right.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				@include for-phone {
+					width: 36px;
+					height: 36px;
+					background-size: 10px;
+				}
+				&.open {
+					background-image: url(../../assets/images/up.svg);
+					@include for-phone {
+						background-size: 16px;
+					}
+				}
+			}
+		}
+		p {
+			padding-left: 45px;
+			width: 70%;
+			line-height: 45px;
+			@include for-phone {
+				font-size: 14px;
+				padding-left: 25px;
+				width: 80%;
+			}
+		}
+	}
+}
+
+.section5 {
+	padding: 0 100px;
+	margin-top: 200px;
+	@include for-tablet {
+        padding: 0;
+        margin-top: 90px;
+	}
+	.wrapper {
+		margin: 1em auto;
+		position: relative;
+	}
+	input {
+		display: none;
+	}
+	.inner {
+		width: percentage($num-of-slide);
+		line-height: 0;
+	}
+	article {
+		width: percentage(1/$num-of-slide);
+		float: left;
+		position: relative;
+		img {
+			width: 100%;
+		}
+	}
+	/*---- SET UP CONTROL ----*/
+	.slider-prev-next-control {
+		height: 50px;
+		position: absolute;
+		top: 30%;
+		width: 100%;
+		@include transform(translateY(-50%));
+		label {
+			display: none;
+			width: 73px;
+			height: 73px;
+			border-radius: 50%;
+			background: $white;
+			cursor: pointer;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	/* Info Box */
+	.info {
+		position: absolute;
+		line-height: 20px;
+		opacity: 0;
+		color: $black;
+		text-align: left;
+		@include transition(all 1000ms ease-out 600ms);
+		.slide-text {
+			font-family: Gotham Medium;
+			color: $white;
+			p {
+				font-size: 16px;
+				line-height: 19px;
+				margin-bottom: 7px;
+				&.price {
+					font-size: 60px;
+					line-height: 28px;
+					margin-top: 30px;
+					span {
+						font-size: 23px;
+						position: relative;
+						top: -24px;
+						font-family: Gotham;
+					}
+				}
+			}
+			.short-description {
+				font-family: Gotham;
+				width: 430px;
+				font-size: 18px;
+				line-height: 25px;
+			}
+			h2 {
+				font-size: 38px;
+				line-height: 49px;
+				width: 280px;
+				margin-top: 0px;
+			}
+		}
+		.btn-holder {
+			margin-top: 30px;
+			button {
+				border-radius: 21px;
+				border: none;
+				font-size: 14px;
+				width: 175px;
+				height: 43px;
+				border: solid 2px $light-blue;
+				cursor: pointer;
+				background: $light-blue;
+				margin-right: 10px;
+				color: $white;
+				&.transparent {
+					background: transparent;
+					color: $light-blue;
+					&:hover {
+						background: $light-blue;
+						color: $white;
+					}
+				}
+			}
+		}
+		h3 {
+			color: $light-yellow;
+			margin: 0 0 5px;
+			font-weight: normal;
+			font-size: 1.5em;
+			font-style: normal;
+		}
+		&.top-left {
+			top: 30px;
+			left: 30px;
+		}
+		&.top-right {
+			top: 30px;
+			right: 30px;
+		}
+		&.bottom-left {
+			bottom: 100px;
+			left: 140px;
+		}
+		&.bottom-right {
+			bottom: 30px;
+			right: 30px;
+		}
+	}
+	/* Slider Styling */
+	.slider-wrapper {
+		border-radius: 30px;
+		width: 100%;
+		overflow: hidden;
+		background: $white;
+		@include transform(translateZ(0));
+		@include transition(all 500ms ease-out);
+		.inner {
+			@include transform(translateZ(0));
+			@include transition(all 800ms cubic-bezier(0.77, 0, 0.175, 1));
+		}
+	}
+	%bind-prev-next-button {
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: inherit;
+		margin: 0;
+		line-height: 38px;
+		font-size: 3em;
+		display: block;
+		color: $gray;
+	}
+	%bind-next-button {
+		@extend %bind-prev-next-button;
+		padding-left: 15px;
+	}
+	%bind-next-label {
+		display: block;
+		position: absolute;
+		float: right;
+		right: -36px;
+		top: -90px;
+		background-image: url(../../assets/images/right.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $light-blue;
+	}
+	%bind-prev-label {
+		display: block;
+		position: absolute;
+		float: right;
+		right: -35px;
+		background-image: url(../../assets/images/left.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $light-blue;
+	}
+	%bind-prev-button {
+		@extend %bind-prev-next-button;
+		padding-left: 8px;
+	}
+	%bind-opacity-info {
+		opacity: 1;
+	}
+	@for $i from 1 through $num-of-slide {
+		#slide#{$i}:checked {
+			&~.slider-wrapper .inner {
+				margin-left: percentage(1 - $i);
+			}
+			&~.slider-wrapper article:nth-child(#{$i}) .info {
+				@extend %bind-opacity-info;
+			}
+		}
+	}
+	@for $i from 1 through ($num-of-slide - 1) {
+		#slide#{$i}:checked {
+			&~.slider-prev-next-control label:nth-child(#{$i +1}) {
+				@extend %bind-next-label;
+				&::after {
+					@extend %bind-next-button;
+				}
+			}
+		}
+	}
+	#slide#{$num-of-slide}:checked~.slider-prev-next-control label:nth-child(1) {
+		@extend %bind-next-label;
+		&::after {
+			@extend %bind-next-button;
+		}
+	}
+	@for $i from 2 through $num-of-slide {
+		#slide#{$i}:checked {
+			&~.slider-prev-next-control label:nth-child(#{$i - 1}) {
+				@extend %bind-prev-label;
+				&::after {
+					@extend %bind-prev-button;
+				}
+			}
+		}
+	}
+	#slide#{1}:checked~.slider-prev-next-control label:nth-child(#{$num-of-slide}) {
+		@extend %bind-prev-label;
+		&::after {
+			@extend %bind-prev-button;
+		}
+	}
+	.slide-tiles {
+		padding-left: 50px;
+		overflow: auto;
+		@include for-phone {
+			padding-left: 20px;
+		}
+		.slides-holder {
+			width: 900px;
+			@include for-phone {
+				width: 800px;
+			}
+			.slide {
+				display: inline-block;
+				border-radius: 25px;
+				overflow: hidden;
+				margin-right: 10px;
+				position: relative;
+				height: 422px;
+				@include for-phone {
+					width: 245px;
+				}
+				.slide-description {
+					color: $white;
+					position: absolute;
+					bottom: 25px;
+					left: 25px;
+					p {
+						font-family: Gotham;
+						font-size: 12px;
+						line-height: 14px;
+					}
+					h2 {
+						font-family: Gotham Medium;
+						font-size: 30px;
+						line-height: 40px;
+						margin: 0;
+					}
+					.price {
+						font-family: Gotham Medium;
+						font-size: 44px;
+						line-height: 28px;
+						margin-top: 20px;
+						span {
+							font-family: Gotham;
+							font-size: 23px;
+							line-height: 28px;
+							position: relative;
+							top: -14px;
+							left: 10px;
+						}
+					}
+					.short-description {
+						font-size: 14px;
+						line-height: 22px;
+						width: 200px;
+						margin-bottom: 25px;
+					}
+				}
+				.btn-holder {
+					button {
+						font-family: Gotham medium;
+						background: $light-blue;
+						border-radius: 24px;
+						border: none;
+						color: $white;
+						font-size: 14px;
+						width: 232px;
+						height: 40px;
+						margin-bottom: 15px;
+						border: 1px solid $light-blue;
+						@include for-phone {
+							width: 200px;
+							height: 40px;
+						}
+						&.transparent {
+							background: transparent;
+							color: $light-blue;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.section3 {
+	padding: 0 100px;
+	margin-top: 200px;
+	@include for-tablet {
+        margin-top: 100px;
+		padding: 0;
+	}
+	.intro {
+		text-align: center;
+		font-family: Gotham;
+		margin-bottom: 80px;
+		@include for-tablet {
+			text-align: left;
+			padding-left: 50px;
+			margin-bottom: 70px;
+		}
+		@include for-phone {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			color: $light-gray;
+			@include for-phone {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+		h2 {
+			margin-top: 0px;
+			font-size: 40px;
+			line-height: 48px;
+			margin-bottom: 25px;
+			@include for-phone {
+				font-size: 24px;
+				line-height: 29px;
+			}
+		}
+		.intro-text {
+			font-size: 18px;
+			line-height: 30px;
+			color: $black;
+			max-width: 750px;
+			margin: auto;
+			@include for-tablet {
+				margin-left: 0px;
+			}
+			@include for-phone {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+	.section3-content {
+		@include for-tablet {
+			padding-left: 50px;
+			overflow: auto;
+		}
+		@include for-phone {
+			padding-left: 20px;
+		}
+	}
+	.offers {
+		display: flex;
+		justify-content: space-between;
+		@include for-tablet {
+			display: block;
+			width: 1250px;
+		}
+		@include for-phone {
+			width: 1140px;
+		}
+		.offer {
+			background: $white-gray;
+			border-radius: 18px;
+			width: 24%;
+			padding-left: 55px;
+			padding-top: 65px;
+			padding-right: 50px;
+			box-sizing: border-box;
+			position: relative;
+			top: 0;
+			@include transitionAll(all, 0.5s);
+			@include for-tablet {
+				display: inline-block;
+				margin-right: 15px;
+				width: 283px;
+			}
+			@include for-phone {
+				width: 255px;
+			}
+			&:hover {
+				top: -24px;
+				@include transitionAll(all, 0.5s);
+				&::before {
+					content: '';
+					width: 100%;
+					height: 3px;
+					background: $light-red;
+					position: absolute;
+					bottom: -24px;
+					left: 0px;
+				}
+			}
+			.title {
+				font-family: Gotham;
+				font-size: 16px;
+				line-height: 19px;
+				letter-spacing: 0.3px;
+				margin-top: 0px;
+			}
+			.size {
+				font-family: Gotham Medium;
+				font-size: 48px;
+				line-height: 58px;
+				letter-spacing: 0.9px;
+				margin-top: 5px;
+				margin-bottom: 15px;
+				span {
+					font-family: Gotham;
+					font-size: 16px;
+					line-height: 19px;
+					letter-spacing: 0.3px;
+					position: relative;
+					top: -24px;
+				}
+			}
+			.features {
+				font-family: Gotham;
+				font-size: 12px;
+				line-height: 14px;
+				border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+			}
+			.price {
+				font-family: Gotham Medium;
+				font-size: 28px;
+				line-height: 28px;
+				span {
+					font-family: Gotham;
+					font-size: 14px;
+					position: relative;
+					top: -9px;
+					left: 5px;
+				}
+			}
+			.actions {
+				.buy {
+					font-family: Gotham Medium;
+					background: $light-blue;
+					color: $white;
+					width: 100%;
+					border-radius: 21px;
+					height: 42px;
+					border: none;
+					font-size: 14px;
+					line-height: 22px;
+					cursor: pointer;
+				}
+				.more {
+					font-family: Gotham Medium;
+					font-size: 14px;
+					color: $light-blue;
+					background: transparent;
+					border: none;
+					width: 100%;
+					text-decoration: none;
+					text-align: center;
+					display: block;
+					margin-top: 13px;
+					margin-bottom: 24px;
+				}
+			}
+		}
+		.last-element {
+			background-image: url(../../assets/images/tiles1.jpg);
+			background-size: cover;
+			border-radius: 18px;
+			color: $white;
+			font-family: Gotham Medium;
+			padding-left: 40px;
+			padding-right: 40px;
+			box-sizing: border-box;
+			width: 24%;
+			align-items: flex-end;
+			padding-bottom: 53px;
+			justify-content: center;
+			display: flex;
+			position: relative;
+			@include for-tablet {
+				display: inline-block;
+				height: 410px;
+				width: 283px;
+				top: 29px;
+			}
+			>div {
+				@include for-tablet {
+					position: absolute;
+					bottom: 52px;
+					width: 75%;
+				}
+				h3 {
+					font-size: 30px;
+					line-height: 42px;
+					margin-bottom: 10px;
+				}
+				p {
+					font-size: 14px;
+				}
+				.learn {
+					font-family: Gotham Medium;
+					width: 100%;
+					background: $light-blue;
+					height: 48px;
+					border-radius: 25.5px;
+					border: none;
+					font-size: 14px;
+					color: $white;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.side-screen-holder {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: $black-transparent;
+	top: 0;
+	z-index: 9;
+	.side-box {
+		margin-right: -438px;
+		height: 100vh;
+		width: 438px;
+		background: $white;
+		position: fixed;
+		right: 0;
+		padding-left: 72px;
+		font-family: Gotham Medium;
+		display: flex;
+		box-sizing: border-box;
+		@include transitionAll(all, 0.5s);
+		animation-name: slideOut;
+		animation-duration: 0.5s;
+		@include for-phone {
+			width: 100%;
+			padding-left: 20px;
+		}
+		&.open {
+			animation-name: slideIn;
+			animation-duration: 0.5s;
+			margin-right: 0px;
+		}
+		.close {
+			position: absolute;
+			top: 47px;
+			left: 41px;
+			cursor: pointer;
+			opacity: 0.8;
+			@include for-phone {
+				left: 20px;
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+		.side-content {
+			display: flex;
+			align-items: center;
+			.page {
+				font-size: 12px;
+				line-height: 14px;
+				color: $light-blue;
+				span {
+					margin-right: 8px;
+					display: block;
+					float: left;
+					height: 13px;
+					width: 38px;
+					background-image: url(../../assets/images/backstep.svg);
+					background-repeat: no-repeat;
+					background-position: center;
+					cursor: pointer;
+				}
+			}
+			.screen {
+				display: none;
+				&.open {
+					display: block;
+				}
+				.offer-description {
+					font-family: Gotham medium;
+					font-size: 18px;
+					line-height: 27px;
+					margin-top: 0px;
+				}
+				.progressbar {
+					margin-top: 50px;
+					.progressbar-text {
+						font-family: Gotham ultra;
+						letter-spacing: 0.4px;
+						font-size: 16px;
+						line-height: 22px;
+					}
+					.back {
+						width: 297px;
+						height: 9px;
+						background: $pb-color;
+						border-radius: 6px;
+						@include for-phone {
+							width: 270px;
+						}
+					}
+					.front {
+						width: 100px;
+						height: 9px;
+						background: $light-blue;
+						border-radius: 6px;
+						margin-top: -9px;
+					}
+					.possition {
+						width: 16px;
+						height: 16px;
+						border-radius: 50%;
+						background: $light-blue;
+						margin-top: -13px;
+						margin-left: 94px;
+					}
+				}
+				.feature-holder {
+					padding-left: 30px;
+					.title {
+						font-family: Gotham;
+						font-size: 16px;
+						line-height: 19px;
+						letter-spacing: 0.3px;
+						margin-top: 0px;
+					}
+					.size {
+						font-family: Gotham Medium;
+						font-size: 48px;
+						line-height: 58px;
+						letter-spacing: 0.9px;
+						margin-top: 5px;
+						margin-bottom: 15px;
+						span {
+							font-family: Gotham;
+							font-size: 16px;
+							line-height: 19px;
+							letter-spacing: 0.3px;
+							position: relative;
+							top: -24px;
+						}
+					}
+					.features {
+						font-family: Gotham;
+						font-size: 12px;
+						line-height: 14px;
+						border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+					}
+					.price {
+						font-family: Gotham Medium;
+						font-size: 28px;
+						line-height: 28px;
+						span {
+							font-family: Gotham;
+							font-size: 14px;
+							position: relative;
+							top: -9px;
+							left: 5px;
+						}
+					}
+				}
+			}
+			h3 {
+				font-size: 32px;
+				line-height: 39px;
+				width: 280px;
+				margin-bottom: 40px;
+				margin-top: 10px;
+			}
+			.items {
+				display: flex;
+				flex-wrap: wrap;
+				.item {
+					background: $bg-tile;
+					border-radius: 22px;
+					height: 34px;
+					border: none;
+					font-size: 14px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding-left: 17px;
+					padding-right: 17px;
+					margin-right: 15px;
+					margin-bottom: 20px;
+					&.selected {
+						padding-left: 33px;
+						padding-right: 33px;
+						background: $light-blue;
+						color: $white;
+					}
+				}
+			}
+			button {
+				font-family: Gotham Medium;
+				background: $light-blue;
+				border-radius: 22px;
+				color: $white;
+				width: 174px;
+				height: 44px;
+				font-size: 14px;
+				border: none;
+				padding: 0;
+				margin-top: 85px;
+				cursor: pointer;
+				&.no-margin {
+					margin-top: 0px;
+				}
+				&.margint40 {
+					margin-top: 40px;
+				}
+			}
+		}
+	}
+}
+
+@keyframes slideIn {
+	from {
+		margin-right: -483px
+	}
+	to {
+		margin-right: 0px
+	}
+}
+
+@keyframes slideOut {
+	from {
+		margin-right: 0px
+	}
+	to {
+		margin-right: -438px
+	}
+}
+
+@keyframes load {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}

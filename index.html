@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Site template</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="css/build/style.min.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="lib/jquery.waypoints.min.js"></script>
+  <script src="lib/jquery.easypiechart.js"></script>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="#"><img src="assets/images/circles.svg" alt="logo"></a>
+      </div>
+      <div class="header-nav">
+        <a href="#"><img src="assets/images/search.svg" alt="search"></a>
+        <a href="#"><img src="assets/images/cart.svg" alt="cart"></a>
+        <a href="#"><img src="assets/images/menu.svg" alt="menu"></a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <nav class="top-nav mobile-content">
+      <ul>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+        <li><a href="#section4">Section 4</a></li>
+        <li><a href="#section5">Section 5</a></li>
+        <li><a href="#section6">Section 6</a></li>
+      </ul>
+    </nav>
+    <!-- Section 1 -->
+    <section class="section1" id="section1">
+      <div class="section1-content">
+        <div class="section1-left">
+          <div>
+            <p>Section 1</p>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <nav class="desktop-content">
+              <ul>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+                <li><a href="#section4">Section 4</a></li>
+                <li><a href="#section5">Section 5</a></li>
+                <li><a href="#section6">Section 6</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="section1-right">
+          <div class="video-holder">
+            <video id="video" width="1200" autoplay>
+              <source src="assets/video/video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-button play">
+            <button id="play"></button>
+          </div>
+          <div class="video-button stop">
+            <button id="stop"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 2 -->
+    <section class="section2" id="section2">
+      <div class="intro">
+        <p>Section 2</p>
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <p class="intro-text">
+          Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+          vulputate magna.
+          Proin dignissim elit vel nisl vulputate lacinia.
+        </p>
+      </div>
+      <div class="scroll-content desktop-content">
+        <div class="items">
+          <div class="img-holder">
+            <img src="assets/images/img0.jpg" alt="">
+            <div class="indicators">
+              <div id="one" class="on" img-url-up='img1.jpg' img-url-down='img0.jpg'></div>
+              <div id="two" class="on" img-url-up='img2.jpg' img-url-down='img1.jpg'></div>
+            </div>
+          </div>
+          <div class="descriptions">
+            <div class="item active" data-order="1" id="sec1">
+              <h2>Item 1</h2>
+              <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+                vulputate magna.</p>
+            </div>
+            <div class="item" data-order="2" id="sec2">
+              <h2>Item 2</h2>
+              <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+                vulputate
+                magna.</p>
+            </div>
+            <div class="item" data-order="3" id="sec3">
+              <h2>Item 3</h2>
+              <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+                vulputate
+                magna.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-scroll-content mobile-content">
+        <div class="horizontal-holder">
+          <div class="s2-item">
+            <div class="s2-item-holder">
+              <img src="assets/images/img0.jpg" alt="">
+              <div class="s2-item-text">
+                <h2 class="s2-item-title">Item 1</h2>
+                <p class="s2-item-desc">Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus
+                  consequat, dignissim vulputate magna.</p>
+              </div>
+            </div>
+          </div>
+          <div class="s2-item">
+            <div class="s2-item-holder">
+              <img src="assets/images/img1.jpg" alt="">
+              <div class="s2-item-text">
+                <h2 class="s2-item-title">Item 2</h2>
+                <p class="s2-item-desc">Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id
+                  tellus
+                  consequat, dignissim vulputate magna.</p>
+              </div>
+            </div>
+          </div>
+          <div class="s2-item">
+            <div class="s2-item-holder">
+              <img src="assets/images/img2.jpg" alt="">
+              <div class="s2-item-text">
+                <h2 class="s2-item-title">Item 3</h2>
+                <p class="s2-item-desc">Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id
+                  tellus
+                  consequat, dignissim vulputate magna.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="section3" id="section3">
+      <div class="intro">
+        <p>Section 3</p>
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <p class="intro-text">
+          Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+          vulputate magna.
+          Proin dignissim elit vel nisl vulputate lacinia.
+        </p>
+      </div>
+      <div class="section3-content">
+        <div class="offers">
+          <div class="offer">
+            <div class="offer-content">
+              <p class="title">Product 1</p>
+              <p class="size">20<span>m2</span></p>
+              <div class="features">
+                <p>Feature 1</p>
+                <p>Feature 2</p>
+              </div>
+              <p class="price">1.499<span>USD</span></p>
+              <div class="actions">
+                <button class="buy">Buy now</button>
+                <a href="#" class="more">More info</a>
+              </div>
+            </div>
+          </div>
+          <div class="offer">
+            <div class="offer-content">
+              <p class="title">Product 1</p>
+              <p class="size">50<span>m2</span></p>
+              <div class="features">
+                <p>Feature 1</p>
+                <p>Feature 2</p>
+              </div>
+              <p class="price">1.499<span>USD</span></p>
+              <div class="actions">
+                <button class="buy">Buy now</button>
+                <a href="#" class="more">More info</a>
+              </div>
+            </div>
+          </div>
+          <div class="offer">
+            <div class="offer-content">
+              <p class="title">Product 1</p>
+              <p class="size">100<span>m2</span></p>
+              <div class="features">
+                <p>Feature 1</p>
+                <p>Feature 2</p>
+              </div>
+              <p class="price">1.499<span>USD</span></p>
+              <div class="actions">
+                <button class="buy">Buy now</button>
+                <a href="#" class="more">More info</a>
+              </div>
+            </div>
+          </div>
+          <div class="last-element">
+            <div>
+              <h3>Lorem ipsum dolor</h3>
+              <p>Proin venenatis lorem at congue aliquet.</p>
+              <button class="learn">Learn more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="side-screen-holder">
+      <aside class="side-box">
+        <img src="assets/images/close.svg" alt="close" class="close">
+        <div class="side-content">
+          <div class="screen screen-first open">
+            <p class="page">1/7</p>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <div class="items">
+              <div class="item selected">Item 1</div>
+              <div class="item">Item 2</div>
+              <div class="item">Item 3</div>
+              <div class="item">Item 4</div>
+              <div class="item">+5</div>
+            </div>
+            <button class="screen-changer" data-next='second'>Next</button>
+          </div>
+          <div class="screen screen-second">
+            <p class="page"><span></span> 2/7</p>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p class="offer-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <div class="progressbar">
+              <p class="progressbar-text">4 lorem ipsum</p>
+              <div class="back"></div>
+              <div class="front"></div>
+              <div class="possition"></div>
+            </div>
+            <button class="screen-changer margint40" data-next="third">Next</button>
+          </div>
+          <div class="screen screen-third">
+            <div class="offer-content">
+              <h3>Lorem ipsum dolor sit amet</h3>
+              <div class="feature-holder">
+                <p class="title">Product 1</p>
+                <p class="size">50<span>m2</span></p>
+                <div class="features">
+                  <p>Feature 1</p>
+                  <p>Feature 2</p>
+                </div>
+                <p class="price">1.499<span>USD</span></p>
+              </div>
+            </div>
+            <button class="no-margin">Buy now</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+
+    <!-- Section 4 -->
+    <section class="section4" id="section4">
+      <p>Section 4</p>
+      <div class="section4-content" id="cloud-s">
+        <div class="section4-left">
+          <h2>Lorem ipsum dolor sit amet1</h2>
+        </div>
+        <div class="section4-right">
+          <div class="chart-holder">
+            <p>Product 1<span>4<strong>s</strong></span></p>
+            <div class="chart chart4" id='cloudone' data-percent="100">
+              <span>4<strong>s</strong></span>
+            </div>
+            <div class="s4-progressbar">
+              <div class="progress load4"></div>
+            </div>
+          </div>
+          <div class="chart-holder">
+            <p>Product 2<span>10<strong>s</strong></span></p>
+            <div class="chart chart10" id="cloudtwo" data-percent="100">
+              <span>10<strong>s</strong></span>
+            </div>
+            <div class="s4-progressbar">
+              <div class="progress load10"></div>
+            </div>
+          </div>
+          <div class="chart-holder">
+            <p>Product 3<span>24<strong>s</strong></span></p>
+            <div class="chart chart24" id="cloudthree" data-percent="100">
+              <span>24<strong>s</strong></span>
+            </div>
+            <div class="s4-progressbar">
+              <div class="progress load24"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section4-content" id="music-s">
+        <div class="section4-left">
+          <h2>Lorem ipsum dolor sit amet2</h2>
+        </div>
+        <div class="section4-right">
+          <div class="chart-holder">
+            <p>Product 1<span>6<strong>s</strong></span></p>
+            <div class="chart chart6" id='musicone' data-percent="100">
+              <span>6<strong>s</strong></span>
+            </div>
+            <div class="s4-progressbar">
+              <div class="progress load6"></div>
+            </div>
+          </div>
+          <div class="chart-holder">
+            <p>Product 2<span>15<strong>s</strong></span></p>
+            <div class="chart chart15" id='musictwo' data-percent="100">
+              <span>15<strong>s</strong></span>
+            </div>
+            <div class="s4-progressbar">
+              <div class="progress load15"></div>
+            </div>
+          </div>
+          <div class="chart-holder">
+            <p>Product 3<span>30<strong>s</strong></span></p>
+            <div class="chart chart30" id='musicthree' data-percent="100">
+              <span>30<strong>s</strong></span>
+            </div>
+            <div class="s4-progressbar">
+              <div class="progress load30"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section4-content" id="movie-s">
+        <div class="section4-left">
+          <h2>Lorem ipsum dolor sit amet3</h2>
+        </div>
+        <div class="section4-right">
+          <div class="chart-holder">
+            <p>Product 1<span>2<strong>s</strong></span></p>
+            <div class="chart chart2" id='movieone' data-percent="100">
+              <span>2<strong>s</strong></span>
+            </div>
+            <div class="s4-progressbar">
+              <div class="progress load2"></div>
+            </div>
+          </div>
+          <div class="chart-holder">
+            <p>Product 2<span>4<strong>s</strong></span></p>
+            <div class="chart chart4" id='movietwo' data-percent="100">
+              <span>4<strong>s</strong></span>
+            </div>
+            <div class="s4-progressbar">
+              <div class="progress load4"></div>
+            </div>
+          </div>
+          <div class="chart-holder">
+            <p>Product 3<span>10<strong>s</strong></span></p>
+            <div class="chart chart10" id='moviethree' data-percent="100">
+              <span>10<strong>s</strong></span>
+            </div>
+            <div class="s4-progressbar">
+              <div class="progress load10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section4-navigation">
+        <div class="linkbtn-holder active" id="cloud" order='0'></div>
+        <div class="linkbtn-holder" id="music" order='1'></div>
+        <div class="linkbtn-holder" id="movie" order='2'></div>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="section5" id="section5">
+      <div class="wrapper desktop-content">
+        <input checked type=radio name="slider" id="slide1" />
+        <input type=radio name="slider" id="slide2" />
+        <input type=radio name="slider" id="slide3" />
+
+        <div class="slider-wrapper">
+          <div class='inner'>
+            <article>
+              <div class="info bottom-left">
+                <div class="slide-text">
+                  <p>Section 5</p>
+                  <h2>Lorem ipsum dolor sit 1</h2>
+                  <p class="price">50<span>USD</span></p>
+                </div>
+                <div class="btn-holder">
+                  <button>Buy now</button>
+                  <button class="transparent">Learn more</button>
+                </div>
+              </div>
+              <img src="assets/images/slide1.jpg" />
+            </article>
+
+            <article>
+              <div class="info bottom-left">
+                <div class="slide-text">
+                  <p>Section 5</p>
+                  <h2>Lorem ipsum dolor sit 2</h2>
+                  <p class="short-description">
+                    Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat,
+                    dignissim
+                    vulputate magna.
+                  </p>
+                </div>
+                <div class="btn-holder">
+                  <button>Buy now</button>
+                </div>
+              </div>
+              <img src="assets/images/slide2.jpg" />
+            </article>
+
+            <article>
+              <div class="info bottom-left">
+                <div class="slide-text">
+                  <p>Section 5</p>
+                  <h2>Lorem ipsum dolor sit 3</h2>
+                  <p class="short-description">
+                    Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat,
+                    dignissim vulputate magna.
+                    Proin dignissim elit vel nisl vulputate lacinia.
+                  </p>
+                </div>
+                <div class="btn-holder">
+                  <button>Buy now</button>
+                </div>
+              </div>
+              <img src="assets/images/slide3.jpg" />
+            </article>
+          </div>
+        </div>
+        <div class="slider-prev-next-control">
+          <label for=slide1></label>
+          <label for=slide2></label>
+          <label for=slide3></label>
+        </div>
+      </div>
+      <div class="slide-tiles mobile-content">
+        <div class="slides-holder">
+          <div class="slide">
+            <img src="assets/images/tile1.jpg" alt="">
+            <div class="slide-description">
+              <div class="slide-text">
+                <p>Section 5</p>
+                <h2>Lorem ipsum dolor sit 1</h2>
+                <p class="price">50<span>USD</span></p>
+              </div>
+              <div class="btn-holder">
+                <button>Buy now</button>
+                <button class="transparent">Learn more</button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/images/tile2.jpg" alt="">
+            <div class="slide-description">
+              <div class="slide-text">
+                <p>Section 5</p>
+                <h2>Lorem ipsum dolor sit 2</h2>
+                <p class="short-description">
+                  Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+                  vulputate magna.
+                </p>
+              </div>
+              <div class="btn-holder">
+                <button>Buy now</button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/images/tile3.jpg" alt="">
+            <div class="slide-description">
+              <div class="slide-text">
+                <p>Section 5</p>
+                <h2>Lorem ipsum dolor sit 3</h2>
+                <p class="short-description">
+                  Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+                  vulputate magna.
+                </p>
+              </div>
+              <div class="btn-holder">
+                <button>Buy now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="section6" id="section6">
+      <p>Section 6</p>
+      <div class="section6-content">
+        <div class="section6-item" data-no='1'>
+          <h2>Lorem ipsum dolor sit amet1</h2>
+          <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+            vulputate magna.</p>
+        </div>
+        <div class="section6-item" data-no='1'>
+          <h2>Lorem ipsum dolor sit amet2</h2>
+          <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+            vulputate
+            magna.</p>
+        </div>
+        <div class="section6-item" data-no='2'>
+          <h2>Lorem ipsum dolor sit amet3</h2>
+          <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+            vulputate magna.</p>
+        </div>
+        <div class="section6-item" data-no='2'>
+          <h2>Lorem ipsum dolor sit amet4</h2>
+          <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+            vulputate
+            magna.</p>
+        </div>
+        <div class="section6-item" data-no='3'>
+          <h2>Lorem ipsum dolor sit amet5</h2>
+          <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+            vulputate magna.</p>
+        </div>
+        <div class="section6-item" data-no='3'>
+          <h2>Lorem ipsum dolor sit amet6</h2>
+          <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+            vulputate
+            magna.</p>
+        </div>
+      </div>
+      </div>
+      <div class="section6-navigation">
+        <div class="nobtn-holder active" id="nav-one" data-noselect='1'>1</div>
+        <div class="nobtn-holder" id="nav-two" data-noselect='2'>2</div>
+        <div class="nobtn-holder" id="nav-three" data-noselect='3'>3</div>
+      </div>
+    </section>
+    <div class="more-info">
+      <div class="info-content">
+        <div class="content-header">
+          <h3>More info</h3>
+          <div class="expand"></div>
+        </div>
+
+        <p>Proin venenatis lorem at congue aliquet. Nullam felis massa, placerat id tellus consequat, dignissim
+          vulputate magna.
+
+          Proin dignissim elit vel nisl vulputate lacinia.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="items">
+        <img src="assets/images/whitelogo.svg" alt="logo">
+        <ul>
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
+        </ul>
+        <div class="social-media">
+          <a href="#"><img src="assets/images/facebook.svg" alt="facebook"></a>
+          <a href="#"><img src="assets/images/instagram.svg" alt="instagram"></a>
+          <a href="#"><img src="assets/images/linkedin.svg" alt="linkedin"></a>
+          <a href="#"><img src="assets/images/twitter.svg" alt="twitter"></a>
+          <a href="#"><img src="assets/images/youtube.svg" alt="youtube"></a>
+        </div>
+      </div>
+      <div class="sec-cat">
+        <h2>Lorem 1</h2>
+        <ul>
+          <li><a href="#">Section 1</a></li>
+          <li><a href="#">Section 2</a></li>
+          <li><a href="#">Section 3</a></li>
+          <li><a href="#">Section 4</a></li>
+          <li><a href="#">Section 5</a></li>
+          <li><a href="#">Section 6</a></li>
+        </ul>
+      </div>
+      <div class="sec-cat">
+        <h2>Lorem 2</h2>
+        <ul>
+          <li><a href="#">Category 1</a></li>
+          <li><a href="#">Category 2</a></li>
+          <li><a href="#">Category 3</a></li>
+          <li><a href="#">Category 4</a></li>
+          <li><a href="#">Category 5</a></li>
+          <li><a href="#">Category 6</a></li>
+        </ul>
+      </div>
+      <div class="download">
+        <div>
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <div class="download-buttons">
+            <button></button>
+            <button></button>
+          </div>
+        </div>
+        <div>
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <form action="">
+            <input type="email" placeholder="Email">
+            <button>Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

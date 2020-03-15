@@ -1,0 +1,250 @@
+.footer-content {
+	background-color: $black;
+	padding: 0 100px;
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	@include for-tablet {
+		padding: 0 50px;
+		flex-wrap: wrap;
+	}
+	@include for-phone {
+		padding: 0 20px;
+	}
+	.items {
+		margin-top: 141px;
+		margin-bottom: 95px;
+		width: 22%;
+		@include for-tablet {
+			width: auto;
+			order: 2;
+			margin-top: 0px;
+		}
+		@include for-phone {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 56px;
+			margin-bottom: 30px;
+		}
+		>img {
+			@include for-phone {
+				order: 2;
+				margin-right: 100%;
+			}
+		}
+		ul {
+			font-family: Gotham Medium;
+			padding: 0px;
+			list-style: none;
+			margin-top: 35px;
+			font-size: 18px;
+			line-height: 27px;
+			@include for-phone {
+				display: flex;
+				order: 3;
+				flex-wrap: wrap;
+			}
+			li {
+				margin-bottom: 20px;
+				@include for-phone {
+					width: 50%;
+				}
+				&:last-child {
+					margin-bottom: 33px;
+				}
+				a {
+					text-decoration: none;
+					color: $white;
+				}
+			}
+			;
+		}
+		.social-media {
+			@include for-phone {
+				order: 1;
+				margin: auto;
+				margin-bottom: 50px;
+			}
+			a {
+				padding-right: 13px;
+				&:last-child {
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+	.sec-cat {
+		width: 22%;
+		margin-top: 151px;
+		margin-bottom: 100px;
+		@include for-tablet {
+			width: auto;
+			order: 3;
+			margin-top: 0px;
+		}
+		@include for-phone {
+			margin-bottom: 0px;
+		}
+		h2 {
+			font-family: Gotham Medium;
+			font-size: 36px;
+			line-height: 27px;
+			color: $white;
+			margin-top: 0px;
+			margin-bottom: 36px;
+			@include for-tablet {
+				font-size: 28px;
+			}
+		}
+		ul {
+			color: $white;
+			font-family: Gotham;
+			list-style: none;
+			font-size: 18px;
+			line-height: 27px;
+			padding: 0px;
+			cursor: pointer;
+			@include for-tablet {
+				font-size: 27px;
+			}
+			@include for-phone {
+				display: flex;
+				order: 3;
+				flex-wrap: wrap;
+			}
+			li {
+				margin-bottom: 30px;
+				@include for-phone {
+					width: 50%;
+					font-size: 18px;
+				}
+			}
+			a {
+				text-decoration: none;
+				color: $white;
+			}
+		}
+	}
+	.download {
+		margin-top: 136px;
+		margin-bottom: 100px;
+		width: 32%;
+		@include for-tablet {
+			margin-top: 75px;
+			margin-bottom: 0px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			order: 1;
+		}
+		@include for-phone {
+			order: 4;
+			margin-top: 0px;
+			margin-bottom: 100px;
+		}
+		>div {
+			&:first-child {
+				@include for-tablet {
+					order: 1;
+				}
+				@include for-phone {
+					display: none;
+				}
+			}
+			&::last-child {
+				@include for-tablet {
+					order: 2;
+				}
+			}
+		}
+		h2 {
+			font-family: Gotham Medium;
+			font-size: 35px;
+			line-height: 39px;
+			color: $white;
+			margin-top: 0px;
+			margin-bottom: 36px;
+			width: 255px;
+			@include for-tablet {
+				font-size: 28px;
+				margin-bottom: 12px;
+			}
+		}
+		.download-buttons {
+			display: flex;
+			margin-bottom: 60px;
+			button {
+				background-image: url(../../assets/images/googleplay.svg);
+				width: 150px;
+				background-repeat: no-repeat;
+				background-position: center;
+				border: none;
+				cursor: pointer;
+				height: 48px;
+				border-radius: 24px;
+				&:focus {
+					outline: none;
+				}
+				&:first-child {
+					margin-right: 30px;
+					background-color: $black;
+					background-image: url(../../assets/images/apple.svg);
+				}
+			}
+		}
+		form {
+			position: relative;
+			width: 320px;
+			@include for-tablet {
+				width: 300px;
+			}
+			@include for-phone {
+				width: 276px;
+			}
+			input {
+				width: 330px;
+				border-radius: 25.5px;
+				border: none;
+				background-color: $white-opacity;
+				font-size: 14px;
+				line-height: 17px;
+				font-family: Gotham Medium;
+				padding: 18px 118px 16px 21px;
+				box-sizing: border-box;
+				@include for-tablet {
+					width: 300px;
+				}
+				@include for-phone {
+					width: 276px;
+				}
+				&::placeholder {
+					color: $black-opacity;
+					font-size: 14px;
+					line-height: 17px;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+			button {
+				width: 104px;
+				padding: 16px 17px 13px 17px;
+				border-radius: 25.5px;
+				border: none;
+				font-size: 14px;
+				line-height: 16px;
+				font-family: Gotham Medium;
+				position: absolute;
+				top: 3px;
+				right: -6px;
+				cursor: pointer;
+				@include for-tablet {
+					right: 4px;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "siteTemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vesna Siljak",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-connect": "^2.1.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-serve": "^0.1.6",
+    "load-grunt-tasks": "^5.1.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-sass": "^3.1.0",
+    "node-sass": "^4.13.1"
+  }
+}

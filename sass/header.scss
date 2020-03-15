@@ -1,0 +1,26 @@
+.header-content {
+	padding: 0 100px;
+	display: flex;
+	justify-content: space-between;
+	height: 66px;
+	align-items: center;
+	@include for-tablet {
+		padding: 0 50px;
+	}
+	@include for-phone {
+		padding: 0 20px;
+	}
+	.header-nav {
+		a {
+			position: relative;
+			&:nth-child(2) {
+				margin-left: 12px;
+				top: -1px;
+			}
+			&:last-child {
+				margin-left: 18px;
+				top: -2px;
+			}
+		}
+	}
+}
